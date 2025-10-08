@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function __invoke(Request $request)
+    public function index (Request $request)
     {
         $users = User::all();
         return UserResource::collection($users);
